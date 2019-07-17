@@ -14,7 +14,6 @@
 
         <div class="main-tabs-content">
             <component-game *ngFor="let game of gameService.games" (selected)="tabGameService.selectTabGame(game.id)" [game]="game" [hidden]="!game.isFocus"></component-game>
-
             <div *ngFor="let plugin of pluginService.plugins">
                 <component-trading (selected)="pluginService.selectTabPlugin(plugin.id)" [hidden]="!plugin.isFocus" *ngIf="plugin.isTrading" ></component-trading>
                 <component-archi (selected)="pluginService.selectTabPlugin(plugin.id)" [hidden]="!plugin.isFocus" *ngIf="plugin.isArchi"></component-archi>

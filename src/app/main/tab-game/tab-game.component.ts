@@ -23,16 +23,16 @@ export class TabGameComponent implements OnInit {
 
     constructor(public option: OptionWindowService,
         public tabService: TabService,
-            public pluginService: PluginService,
-            public tabGameService: TabGameService,
-            public tabPluginService: TabPluginService,
-            private applicationService: ApplicationService,
-            public settingsService: SettingsService,
-            private ipcRendererService: IpcRendererService,
-            private injector: Injector) {
-        this.windowService = this.injector.get(WindowService)
-        this.appName = applicationService.appName;
-    }
+        public pluginService: PluginService,
+        public tabGameService: TabGameService,
+        public tabPluginService: TabPluginService,
+        private applicationService: ApplicationService,
+        public settingsService: SettingsService,
+        private ipcRendererService: IpcRendererService,
+        private injector: Injector) {
+            this.windowService = this.injector.get(WindowService)
+            this.appName = applicationService.appName;
+        }
 
     ngOnInit() {
 
@@ -126,5 +126,4 @@ export class TabGameComponent implements OnInit {
         });
 
     }
-
 }

@@ -97,6 +97,7 @@ export class TabGameService extends EventEmitter {
             this.tabService.addTab(tab);
 
             if (cb) cb();
+
         };
 
         if (this.gameService.games.length > 5) {
@@ -119,7 +120,6 @@ export class TabGameService extends EventEmitter {
      * @param id
      */
     public selectTabGame(id: number): void {
-        
         // Cache le plugin actif
         if (this.pluginService.active !== null) {
             this.pluginService.active.isFocus = false;

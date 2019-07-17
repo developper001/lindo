@@ -55,4 +55,3 @@ To accelerate the debug, lunch the app without closing it and then the vscode de
 To debug the MainProcess, choose the VSCode called 'Debug Main Process'.  
 Press Ctrl + Alt + I to debug lindo.  
 In the Network tab of devtools, toggle the web socket item before login.  
-

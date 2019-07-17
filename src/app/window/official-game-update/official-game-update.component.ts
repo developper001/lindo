@@ -76,23 +76,18 @@ export class OfficialGameUpdateComponent implements OnInit, OnDestroy {
             try {
 
                 let promises = [];
-                console.log('1');
 
                 promises.push(this.downloadKeymaster());
 
                 // Downloading manifests
-                console.log('2');
-
                 await Promise.all([
                     /*this.loadCurrentLindoManifest(), this.loadCurrentManifest()*/, this.loadCurrentAssetMap()/*, this.loadVersions()*/, this.loadCurrentRegex(),
                     this.loadCurrentLindoManifest(), this.loadCurrentManifest(), this.loadCurrentAssetMap(), this.loadVersions(), this.loadCurrentRegex(),
                     this.downloadLindoManifest(), this.downloadManifest(), this.downloadAssetMap()
-                    ]);
+                ]);
 
                 
                 // Checking differences
-                console.log('3');
-
                 let lindoManifestDifferences = this.differences(this.currentLindoManifest, this.lindoManifest);
                 let manifestDifferences = this.differences(this.currentManifest, this.manifest);
                 let assetMapDifferences = this.differences(this.currentAssetMap, this.assetMap);
@@ -102,9 +97,6 @@ export class OfficialGameUpdateComponent implements OnInit, OnDestroy {
                     for (let i in manifestDifferences)
                         manifestDifferences[i] = 1;
                 }
-
-                console.log('4');
-                // await this.sleep(5000);
 
                 setTimeout(() => {
                     this.translate.get('app.window.update-dofus.information.downloading').subscribe((res: string) => {
@@ -125,15 +117,11 @@ export class OfficialGameUpdateComponent implements OnInit, OnDestroy {
 
 
                 // Deleting old files
-                console.log('5');
-
                 promises.push(Promise.all([
                         this.deleteOldFiles(lindoManifestDifferences),
                         this.deleteOldFiles(manifestDifferences),
                         this.deleteOldFiles(assetMapDifferences)
                     ]));
-
-                    console.log('5 bis');
 
                 // Downloading lindo & game files
 
@@ -141,9 +129,6 @@ export class OfficialGameUpdateComponent implements OnInit, OnDestroy {
                         this.downloadMissingFiles(this.lindoManifest, lindoManifestDifferences),
                         this.downloadMissingFiles(this.manifest, manifestDifferences, this.remoteOrigin)
                     ]);
-
-                    console.log('6');
-
 
                 promises.push((async (resolve, reject) => {
                     if (manifestMissingFiles["build/script.js"]) {
@@ -196,7 +181,6 @@ export class OfficialGameUpdateComponent implements OnInit, OnDestroy {
 
 
                 this.log("Saving manifests");
-                console.log('7');
 
                 await Promise.all([
                         this.saveOneFile(this.destinationPath + "lindoManifest.json", JSON.stringify(this.lindoManifest)),
@@ -207,8 +191,6 @@ export class OfficialGameUpdateComponent implements OnInit, OnDestroy {
 
 
                 this.ipcRendererService.send('update-finished', this.versions);
-                console.log('8');
-
             } catch (e) {
                 console.log(e);
                 this.translate.get('app.window.update-dofus.information.error').subscribe((res: string) => {
@@ -227,7 +209,6 @@ export class OfficialGameUpdateComponent implements OnInit, OnDestroy {
     sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
-    
     loadCurrentLindoManifest() {
         return new Promise((resolve, reject) => {
             fs.readFile(this.destinationPath + "lindoManifest.json", (err, data) => {

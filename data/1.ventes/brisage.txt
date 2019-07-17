@@ -1,0 +1,94 @@
+* ga pa
+Kikoularc (28% de rune ga pa). 12 kikou, 4 ga pa, PI total : 677028, prix ga pa : 800 000k, gain : 122 972k
+Arc en racine d'Abraknyde, 48 racine d'abraknyde, 2 ga pa, PI total : 389 904k, prix ga pa : 400 000k, gain : 11 000k
+6887k = [Ficelle en Lin](25 * 1) + [Racine d'Abraknyde](549 * 10) + [Ambre d'Abraknyde](663 * 2) + [Bois d'If](46 * 1)
+pelle ares (30%)
+craquebille pour craft kamasutra puis brisage gapa
+voir brisage.ods
+
+* runes pme
+Capodindo (stocks en masse, facile de famrer les dd avec retraite de l'enu)
+Cruelle Pelle-Truelle
+Puissantes Bottes de Poursuite
+Raquettes Dugraal
+gelobottes
+voir brisage.ods
+
+* Rune PO
+Baguette Sylvien, 20% de chance d'obtenir une rune PO, indexé sur Aluminite, vrai prix des runes PO : 14 200k. 24% rentabilité sur 100 crafts
+Chtévu, runes per N en plus, 25% de chance d'obtenir une rune PO, sanglier des plaines
+Ceinture Dracochoune (per N)
+araknamu
+La poilue (per terre)
+
+* do elementaire, do pou, re pou, fuite
+kwakwaffe, 4 à 5 runes
+
+* do neutre, re cri
+Bottes de Nelween (Fuite, Esq PM, le plus rentable ?), amulette de nelween (tacle 150k, retrait pa 50k) OU cape de nelween (fuite 1600k, esquive pa 1300k)
+
+* do cri, pp, ini
+ceinture du koalak, pa do cri (35 000k), do cri (5800k), pa pp (2800k), pa ine (2000k), pp (200k), 30 brisé, 25% rentabilité sur 40 crafts. Possibilité de faire en boucle la salle 1 du dj kouloss.
+alliance de corail (croquette du farm de nelween)
+perruque de iop (pa do cri, a monter à 10)
+
+* ra vi
+cape du kitsou, monter la vita à 104 avec des runes vi simples => gain de 20% sur 100 crafts
+
+* ra ini
+Kanistère, 1500 ini fixe, 5 à 7 cc, 201 à 250 vita, 6 à 10 do
+amulette de la boule, ra sa à 34
+
+* per neutre
+Oeil de Kanigrou
+Abrature, AS, semble tres rentable
+Chtévu, 25% de chance d'obtenir une rune PO, sanglier des plaines
+ceinture dracochoune (PO)
+ratrouille (PO)
+
+* pa prospe
+Ceinture d'une Femme en Or (pa prosp et ra pod à 100%)
+Chapodindo
+Amulette du Mineur sombre, pas rentable ? la monter à 9 de pp pour la pa pp. 209 tenta : cout 801 455k, gain : 886 160k => perte de 80 000k.
+
+* ra pui, 34 puissance
+Cape Ouginak
+
+* pa pui
+boufbottes, 9 puissance
+Cape Ouginak, 34 puissance (estimation)
+
+* rune ré pme (esquive pm)
+Bottes de Nelween
+Sceptre du kanniboul Ebil, runes do feu et pp. 27 brisé, non fm, 89 re pme, 87 do feu, rentabilité de 40.2% !
+
+* ra pods
+ceinture du bouftou, min 340
+
+* re per terre
+Bottes du craqueleur, a tester
+kwakobottes de terre, a tester
+Ceinture Brâkmarienne (stocks en masse)
+kwakaneau
+
+* ra force
+Hache Térophyle, 21 à 70 force (50%), à crafter les jours d'amélioration des ingrédients, vente des runes le lendemain
+
+* ra ine
+Trancheuse d'If (Kobalte), 34 intell
+Lorko Kasko (Ecorce d'abraknyde sombre)
+Dagues ancestrales, 41 à 50 intell, 1 dom
+
+* ra cha
+Sargasse (Cuivre)
+
+* pa do neutre neutre pa terre pa eau :
+Katar Strophe, ramel
+
+* ra pod
+Ceinture d'une femmme (stocks)
+Sac du grand Aventurier (stocks)
+
+* per eau
+Cape du champ champ
+

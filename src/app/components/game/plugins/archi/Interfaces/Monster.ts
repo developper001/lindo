@@ -1,0 +1,22 @@
+
+export interface Monster {
+    animFunList: any[],
+    canPlay: boolean,
+    canTackle: boolean,
+    correspondingMiniBossId: number,
+    drops: any[],
+    favoriteSubareaId: number,
+    gfxId: number,
+    grades: any[],
+    id: number,
+    isBoss: boolean,
+    isMiniBoss: boolean,
+    isQuestMonster: boolean,
+    look: string,
+    nameId: string,
+    race: number,
+    spells: any[],
+    subareas: any[],
+    useBombSlot: boolean,
+    useSummonSlot: boolean,
+}

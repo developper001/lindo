@@ -1,0 +1,47 @@
+<div class="tabs-container">
+    <div [sortablejs]="tabService.tabs">
+
+        <div class="tab tab-tab" [class.focus]="tab.isFocus" [class.notification]="tab.notification" *ngFor="let tab of tabService.tabs;"
+            (click)="tabGameService.selectTabGame(tab.id);" matTooltip="{{tab.character}}" matTooltipPosition="right">
+
+            <mat-icon *ngIf="!tab.icon">keyboard</mat-icon>
+            <div class='icon-char' id="tab-icon-{{tab.id}}"></div>
+
+            <div class="tab-close" (click)="tabGameService.removeTabGame(tab.id)">
+                <mat-icon class="mat-16">close</mat-icon>
+            </div>
+        </div>
+    </div>
+
+    <div [sortablejs]="pluginService.plugins">
+        <div class="tab tab-tab" matTooltipPosition="right"
+        *ngFor="let plugin of pluginService.plugins;"
+        [class.focus]="plugin.isFocus"
+        [class.notification]="plugin.notification" 
+        (click)="tabPluginService.selectTabPlugin(plugin.id);"
+        matTooltip="{{plugin.pluginName}}"
+        >
+            <mat-icon *ngIf="plugin.isTrading">trending_up</mat-icon>
+            <mat-icon *ngIf="plugin.isArchi">pets</mat-icon>
+            <mat-icon *ngIf="plugin.isRune">flash_on</mat-icon>
+            <!-- <mat-icon *ngIf="!plugin.isTrading && !plugin.isTrading">settings_input_component</mat-icon> -->
+
+            <div class='icon-char' id="tab-icon-{{plugin.id}}"></div>
+
+            <div class="tab-close" (click)="tabGameService.removeTabPlugin(plugin.id)">
+                <mat-icon class="mat-16">close</mat-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab tab-add" (click)="tabGameService.addTabGame()" *ngIf="tabService.tabs.length < 8" matTooltip="{{ 'app.main.tab.add' | translate }}"
+        matTooltipPosition="right">
+        <mat-icon class="mat-24">add</mat-icon>
+    </div>
+</div>
+
+<div class="options">
+    <button mat-icon-button (click)="option.open()">
+        <mat-icon>settings</mat-icon>
+    </button>
+</div>

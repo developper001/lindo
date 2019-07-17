@@ -1,0 +1,20 @@
+<div class="reciepe-container">
+  <div class="titleDiv">{{MainTitle}}</div>
+
+  <div class="filterDiv">
+    <mat-form-field class="filter-form">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter reciepes by name">
+    </mat-form-field>
+  </div>
+
+  <div class="tableDivReciepe">
+    <mat-table #table [dataSource]="dataSource" matSort matSortActive="totalPrice" matSortDirection="desc" matSortDisableClear>
+      <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{column.value}} </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element[column.id]}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns;"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>

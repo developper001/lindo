@@ -1,0 +1,48 @@
+Brasillant
+600 000k
+1000 Kolizeton
+
+Parchemin de Sorts
+600 000k
+1000 Kolizeton
+
+Acajou
+300 000k
+1000 Doplon
+
+Rutilant
+60 000k
+100 Kolizeton
+
+Boucané
+30 000k
+100 Doplon
+
+Cramoisi
+6 000k
+10 Kolizeton
+
+Bistré
+2 800k
+10 Doplon
+
+=================================
+
+1 Kolizeton = 2 Doplon
+1 Dopeul lvl 200 = 12 000k
+
+=================================
+
+
+Solaire
+75 Almaton
+
+Luniare
+15 almaton
+
+Saisonnier
+3 almaton
+
+Tourmaline
+25 amaton
+

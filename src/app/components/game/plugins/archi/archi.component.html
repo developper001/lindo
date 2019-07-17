@@ -1,0 +1,52 @@
+<div class="main-container">
+  <div class="titleDiv">{{MainTitle}}</div>
+
+  <div class="formDiv">
+
+    <form class="archi-form" (ngSubmit)="onAllInOne()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="AllInoneDisabled">All in one</button>
+    </form>
+
+    <form class="archi-form" (ngSubmit)="onPdaUpdate()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdatePdaDisabled">Mettre à jour les pda</button>
+    </form>
+
+    <form class="archi-form" (ngSubmit)="onArchiFilter()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateArchiFilterDisabled">Filtrer les archis</button>
+    </form>
+
+    <form class="archi-form" (ngSubmit)="onCalculateOcrePrice()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="CalculateOcrePriceDisabled">Mise à jour du prix de l'ocre</button>
+    </form>
+
+    <form class="archi-form" (ngSubmit)="onArchiReset()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateArchiResetDisabled">Reset</button>
+    </form>
+
+    <form class="archi-form" (ngSubmit)="onArchiNb()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateArchiNbDisabled">Mes archi</button>
+    </form>
+  </div>
+  
+  <div class="filterDiv">
+      <mat-form-field>
+        <input matInput placeholder="Nombre d'archi en hdv" type="number" (input)="onFilterNbHdvChanged($event)">
+      </mat-form-field>
+
+      <mat-form-field class="filter-form">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrer les archi par nom">
+      </mat-form-field>
+  </div>
+
+  <div class="tableDiv">
+    <mat-table #table [dataSource]="dataSource" matSort matSortActive="minPrice" matSortDirection="asc" matSortDisableClear>
+      <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{column.value}} </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element[column.id]}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns;"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+
+</div>

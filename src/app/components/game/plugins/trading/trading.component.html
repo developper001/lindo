@@ -1,0 +1,93 @@
+<div class="main-container">
+  <div class="titleDiv">{{MainTitle}}</div>
+
+
+  <div class="filterDiv">
+      <mat-form-field>
+        <mat-select class="select-form" placeholder="Filtrer les métiers" (change)="onPersoChanged($event)">
+          <mat-option *ngFor="let p of persos" [value]="p.jobs">{{ p.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="filter-form">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrer les items par nom" [(ngModel)]="filterValue">
+      </mat-form-field>
+  </div>
+
+  <div class="tableDiv">
+    <mat-table #table [dataSource]="dataSource" matSort matSortActive="marginAftTax" matSortDirection="desc" matSortDisableClear>
+      <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef style="margin-right: 10px;">
+            <mat-checkbox (change)="($event ? masterToggle() : null); onRowToggle();" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row" style="margin-right: 10px;">
+            <mat-checkbox (click)="$event.stopPropagation()" (change)="($event ? selection.toggle(row) : null); onRowToggle();" [checked]="selection.isSelected(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+      <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{column.value}} </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element[column.id]}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns;"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+
+  <div class="formDiv">
+    <form class="trading-form" (ngSubmit)="onAllInOne()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="AllInOneDisabled">All in one</button>
+    </form>
+      
+    <form class="trading-form" (ngSubmit)="onUpdateSellHistory()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateSellHistoryDisabled">Update Sell History</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onUpdateIngredientPrice()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateIngredientPriceDisabled">Update Ingredient Price</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onFilterFromHdvInventoryBank()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="FilterFromHdvDisabled">Filter from Hdv, Inventory, Bank</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onCancelFilter()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="CancelFilterDisabled">Cancel filter</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onUpdateFinalItemPrice()">
+      <button mat-raised-button type="submit" class="btn btn-success">{{FinalItemPriceText}}</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onUpdateMargin()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateMarginDisabled">Update Margin</button>
+    </form>
+  </div>
+
+  <div class="formDiv">      
+    <form class="trading-form" (ngSubmit)="onUpdateSelected()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateSelectedDisabled">Update Selected</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onBankTransfertSelected()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateBankTransfertDisabled">Bank Transfert</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onAutoSelect()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="AutoToggleDisabled">Auto Select</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onExportCsv()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="SaveDataDisabled">Save selected to CSV</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onImportCsv()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="ImportDataDisabled">Import selected from CSV</button>
+    </form>
+  </div>
+
+  <component-reciepe></component-reciepe>
+
+</div>

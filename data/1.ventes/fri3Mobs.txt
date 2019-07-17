@@ -1,0 +1,48 @@
+1. Bastion des froides légions
+
+Stalak :
+RDS 2 PO, mobs inclus
+
+Ventrublion :
+Alliés au contact : 5 PM, 500 dommages, 100 tacle, 1 tour
+
+Verglasseur :
+5 PO : Malus vita, 1 tour
+
+Karkanik :
+Tappé à moins de 7 PO : -100 fuite, pesanteur, lourd, 1 tour
+
+Missiz : Prendre un sram avec la cape glaciale pour la relance 1 tour plus tot de l'invisibilité
+
+
+2. Remparts à vent
+
+Mansordide :
+Tappe en ligne PO infinie, soigne, à focus
+
+Mécanofoux :
+Do pou mobs 4PO diagonale
+
+Mérulor :
+CAC do pou, tappe en ligne PO
+
+Kanimate :
+Tappe fort si peu de pdv
+
+
+3. Jardins d'Hivers
+
+Dodox
+-1000 soin lors du bond, si tappé boost 3 PO, donne 500 de bouclier si tappé au cac
+
+Drosérâle
+repousse si aligné
+
+Krakal
+si poussé, +200do sur 3 PO sur la case d'arrivée, fort si peu de vie ou si moitier de vie
+
+Nessil
+tappe au cac et en ligne sans ldv&, 60% de vulné, pas de rds si cac
+
+Termystique
+500 dommages d'Eau si attaqué au cac

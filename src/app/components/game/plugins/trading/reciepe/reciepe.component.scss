@@ -1,0 +1,32 @@
+.reciepe-container {
+
+}
+
+.filter-form {
+    margin-left: 10px;
+    width: 90%;
+}
+
+ .mat-column-nameId {
+     flex: 0 0 220px;
+ }
+
+::ng-deep .mat-select-panel {
+    max-height: 80vh !important;
+}
+
+::ng-deep .mat-select-content{
+    width:200px;
+    background-color: white;
+    font-size: 13px;
+}
+
+.tableDivReciepe {
+    max-height: 700px;
+    float: left;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    overflow: auto;
+    margin-bottom: 30px;
+}

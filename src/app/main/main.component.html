@@ -1,0 +1,29 @@
+<component-toolbar *ngIf="isElectron"></component-toolbar>
+
+<div class="main-content">
+
+    <ng-container *ngIf="authService.authRequired">
+        <component-auth></component-auth>
+    </ng-container>
+
+    <ng-container *ngIf="!authService.authRequired">
+
+        <div class="main-tabs">
+            <component-tab-game></component-tab-game>
+        </div>
+
+        <div class="main-tabs-content">
+            <component-game *ngFor="let game of gameService.games" (selected)="tabGameService.selectTabGame(game.id)" [game]="game" [hidden]="!game.isFocus"></component-game>
+
+            <div *ngFor="let plugin of pluginService.plugins">
+                <component-trading (selected)="pluginService.selectTabPlugin(plugin.id)" [hidden]="!plugin.isFocus" *ngIf="plugin.isTrading" ></component-trading>
+                <component-archi (selected)="pluginService.selectTabPlugin(plugin.id)" [hidden]="!plugin.isFocus" *ngIf="plugin.isArchi"></component-archi>
+                <component-rune (selected)="pluginService.selectTabPlugin(plugin.id)" [hidden]="!plugin.isFocus" *ngIf="plugin.isRune"></component-rune>
+            </div>
+
+            <!-- Permet de charger le styles des boutons matérial manuellement -->
+            <button class="none" mat-raised-button></button>
+        </div>
+
+    </ng-container>
+</div>

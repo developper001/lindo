@@ -1,0 +1,49 @@
+<div class="main-container">
+  <div class="titleDiv">{{MainTitle}}</div>
+
+  <div class="formDiv">
+    <form class="rune-form" (ngSubmit)="onAllInOne()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="AllInOneDisabled">All in one</button>
+    </form>
+      
+    <form class="rune-form" (ngSubmit)="onReadRuneFile()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="ReadRuneFileDisabled">Read Rune file</button>
+    </form>
+
+    <form class="rune-form" (ngSubmit)="onUpdateIngredientPrice()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateIngredientPriceDisabled">Update Ingredient price</button>
+    </form>
+
+    <form class="trading-form" (ngSubmit)="onUpdateRunePrice()">
+      <button mat-raised-button type="submit" class="btn btn-success">{{RunePriceText}}</button>
+    </form>
+
+    <form class="rune-form" (ngSubmit)="onUpdateMargin()">
+      <button mat-raised-button type="submit" class="btn btn-success" [disabled]="UpdateMarginDisabled">Update Margin</button>
+    </form>
+  </div>
+  
+  <div class="filterDiv">
+    <mat-form-field>
+      <mat-select class="select-form" placeholder="Filter runes" (change)="onRuneChanged($event)">
+        <mat-option *ngFor="let p of runes" [value]="p.value">{{ p.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="filter-form">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrer les rune par nom">
+    </mat-form-field>
+  </div>
+
+  <div class="tableDiv">
+    <mat-table #table [dataSource]="dataSource" matSort matSortActive="runeMarginAftTax" matSortDirection="desc" matSortDisableClear>
+      <ng-container matColumnDef="{{column.id}}" *ngFor="let column of columnNames">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{column.value}} </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element[column.id]}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns;"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+
+</div>

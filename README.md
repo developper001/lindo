@@ -17,6 +17,7 @@ npm start
 
 # Security
 100% open source, based on lindo emulator.
+A fork of https://github.com/prixe/lindo
 
 # Instructions and kamas tips
 Check the data folder of this project.  
@@ -52,3 +53,6 @@ If you only change a component, you just need to restart npm start.
 In MainIpcService for exemple, one must restart npm run build:dev.  
 To accelerate the debug, lunch the app without closing it and then the vscode debug.  
 To debug the MainProcess, choose the VSCode called 'Debug Main Process'.  
+Press Ctrl + Alt + I to debug lindo.  
+In the Network tab of devtools, toggle the web socket item before login.  
+

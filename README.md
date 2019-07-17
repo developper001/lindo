@@ -22,12 +22,12 @@ A fork of https://github.com/prixe/lindo
 # Instructions and kamas tips
 Check the data folder of this project.  
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/1.png)  
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/2.png)  
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/3.png)  
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/4.png)  
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/5.png)  
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/6.png)  
+![alt text](https://raw.githubusercontent.com/developper001/lindo/master/data/1.png)  
+![alt text](https://raw.githubusercontent.com/developper001/lindo/master/data/2.png)  
+![alt text](https://raw.githubusercontent.com/developper001/lindo/master/data/3.png)  
+![alt text](https://raw.githubusercontent.com/developper001/lindo/master/data/4.png)  
+![alt text](https://raw.githubusercontent.com/developper001/lindo/master/data/5.png)  
+![alt text](https://raw.githubusercontent.com/developper001/lindo/master/data/6.png)  
 
 
 # Smart Plugins
